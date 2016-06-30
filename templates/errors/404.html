@@ -1,0 +1,16 @@
+
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Holy Mackerel! (error 404!)</h2>
+<h3>The holy internet fish is unable to find the page you just asked for! Disaster!</h3>
+<!--
+<div><img src="http://img04.deviantart.net/bc83/i/2011/364/3/3/holy_mackerel_batman_by_mattiebo123-d4kq7ca.png" style="float: right;"class="img-responsive">
+-->
+<p>If you reached this page because of a link on our website, then tell us! Please, it helps other people not see this too.</p>
+<p>If its because of some other website, then you might want to tell them aswell (it probably was our fault for changing something around after all)</p>
+<p>If you are still lost, why not go the <a href="{{ url_for('home') }}">Home Page</a>?</p>
+</div>
+{% endblock %}

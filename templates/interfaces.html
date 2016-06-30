@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<div class="table-hover">
+  <table class="table">
+    <tr>
+      <th>Interface Name</th>
+      <th>Interface Type</th>
+      <th>Enabled?</th>
+      <th>Settings</th>
+    </tr>
+    {% for interface in ifacelist %}
+    <tr>
+      <td><h4>{{interface[0]}}</h4></div></td>
+      <td>{{interface[2]}}</td>
+      {% if interface[1] %}
+      <td><input type="checkbox" checked data-toggle="toggle" name="{{interface[0]}}" data-onstyle="success" data-offstyle="danger"></td>
+      {% else %}
+      <td><input type="checkbox" unchecked data-toggle="toggle" data-onstyle="success" data-offstyle="danger"></td>
+      {% endif %}
+      <td>
+        <button type="button" class="btn btn-default btn-lg">
+          <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings
+        </button>
+      </td>  
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}
